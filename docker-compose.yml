@@ -1,0 +1,20 @@
+services:
+  cowrie:
+    image: cowrie/cowrie:latest
+    container_name: cowrie_node
+    restart: always
+    ports:
+      - "22:2222"
+    volumes:
+      - ./cowrie-logs:/cowrie/cowrie-git/var/log/cowrie # External mount for logs
+
+  flask_ui:
+    image : sulaimanxmb/cowrie-flask-ui:1.0
+    container_name: honey_ui
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./cowrie-logs:/app/logs:ro # Mount logs as read-only
+    depends_on:
+      - cowrie
