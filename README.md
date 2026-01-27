@@ -1,6 +1,6 @@
 # Cowrie Honeypot with Live Web Dashboard
 
-This is a cowrie SSH honeypot dockerized which has live updating web daskboard running on port 8080
+This is a cowrie SSH honeypot dockerized which has live updating web dashboard running on port 8080
 
 ### Note : 
 - SSH only works if both devices are in same LAN
@@ -33,19 +33,25 @@ Build and start the containers(Cowrie Honeypot + Flask UI):
 ```bash
 docker-compose up -d --build
 ```
+![](docs/Container_creation.png)
 
-### 4. Access the Dashboard
-Open your browser and go to :
-👉 **http://localhost:8080**
 
-### 5. Test It
-Simulate an attack by SSHing into the honeypot (port 22):
+### 4. Test It
+Simulate an attack by SSH into the honeypot (port 22):
 
 ```bash
-ssh -p 22 root@container'sIP
+ssh -p 22 root@container-IP
 ```
-
 *   **Password:** Any password will likely work (or fail depending on emulation).
+![](docs/ssh_login.png)
+
+
+### 5. Access the Dashboard
+Open your browser and go to :
+👉 **http://localhost:8080**
+![](docs/Live_feed.png)
+
+
 *   **Check the Dashboard:** You should see the login attempt and commands appear immediately.
     *   **Green:** Successful logins and common commands (ls, pwd, etc.).
     *   **Red:** Failed logins.
