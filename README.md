@@ -1,5 +1,12 @@
 # Cowrie Honeypot with Live Web Dashboard
 
+![Docker](https://img.shields.io/badge/Docker-Containerized-blue)
+![Docker Compose](https://img.shields.io/badge/Docker--Compose-Orchestrated-2496ED)
+![Python](https://img.shields.io/badge/Python-Flask-green)
+![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)
+![Port](https://img.shields.io/badge/Dashboard-8080-orange)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
+
 This is a cowrie SSH honeypot dockerized which has live updating web dashboard running on port 8080
 
 ### Note : 
